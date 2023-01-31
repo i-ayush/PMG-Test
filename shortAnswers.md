@@ -31,7 +31,7 @@ Perform load tests by 100-fold of data and check the performance of the applicat
 estimate it would take for the junior developer on this project?
 Ans: This project definitely requires regress testing, so I would like 12 days where 
 1st day - Research, Evaluation
-2nd -5th day - Coding, writing test cases, fix bugs
+2nd -5th day - System Design (Architecture Design), coding, writing test cases, fix bugs
 6th - 7th - First round of load test, address issues discovered
 8th - 9th - Second round of load test, address issues discovered (Dev, Test)
 10th - 11th - Final round of load test, address issues discovered
