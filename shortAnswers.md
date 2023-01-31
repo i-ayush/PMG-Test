@@ -30,18 +30,18 @@ Perform load tests by 100-fold of data and check the performance of the applicat
 4. If 1 story point is a single work day, how many story points would you
 estimate it would take for the junior developer on this project?
 Ans: This project definitely requires regress testing, so I would like 12 days where 
-    ### 1st day - Research, Evaluation
-    ### 2nd -5th day - System Design (Architecture Design), coding, writing test cases, fix bugs
-    ### 6th - 7th - First round of load test, address issues discovered
-    ### 8th - 9th - Second round of load test, address issues discovered (Dev, Test)
-    ### 10th - 11th - Final round of load test, address issues discovered
-    ### 12th - Deployment and Release (Prod)
+    #### 1st day - Research, Evaluation
+    #### 2nd -5th day - System Design (Architecture Design), coding, writing test cases, fix bugs
+    #### 6th - 7th - First round of load test, address issues discovered
+    #### 8th - 9th - Second round of load test, address issues discovered (Dev, Test)
+    #### 10th - 11th - Final round of load test, address issues discovered
+    #### 12th - Deployment and Release (Prod)
 
 5. Are there any feature extensions that you would like to implement that are
 outside of the base requirements? If so, list them here along with the
 requirements.
 Ans:
- a. A web portal for the customer.
-b . Ability to create collage, instead of single image
-c. Clean-up for stale images
-d. Caching 
+    #### a. A web portal for the customer.
+    #### b . Ability to create collage, instead of single image
+    #### c. Clean-up for stale images
+    #### d. Caching 
