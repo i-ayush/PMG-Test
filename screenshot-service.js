@@ -46,7 +46,8 @@ function generateHtmlPage(productId, imageUrl) {
           captureWebsite.file(htmlPage, `${item[0]}.png`, {
              inputType: 'html',
              width: 300,
-             height: 500
+             height: 500,
+             overwrite: true
          });
          items.shift();
      }));
