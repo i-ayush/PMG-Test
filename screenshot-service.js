@@ -35,7 +35,7 @@ function showProgress(file, cur, len, total) {
 
 function generateHtmlPage(productId, imageUrl) {
     const today = new Date();
-    return `<p>Today's Date : ${today.getMonth()}/${today.getDate()}/${today.getFullYear()} <br/>
+    return `<p>Today's Date : ${today.getMonth()+1}/${today.getDate()}/${today.getFullYear()} <br/>
         Product ID: ${productId}<br/>
         <img src="${imageUrl}" alt=""/></p>`;
 }
