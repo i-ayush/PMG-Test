@@ -40,22 +40,21 @@ function generateHtmlPage(productId, imageUrl) {
         <img src="${imageUrl}" alt=""/></p>`;
 }
 
- function createScreenShot(items) {
-     (async () => {
-         return await Promise.all(items.map(function (item) {
-             let htmlPage = generateHtmlPage(item[1], item[2]);
-              captureWebsite.file(htmlPage, `${item[0]}.png`,  {
-                 inputType: 'html',
-                  width: 250,
-                  height: 400
-             });
-         }));
-     })();
-}
+ async function createScreenShot(items) {
+     await Promise.all(items.map(function (item) {
+         let htmlPage = generateHtmlPage(item[1], item[2]);
+          captureWebsite.file(htmlPage, `${item[0]}.png`, {
+             inputType: 'html',
+             width: 300,
+             height: 500
+         });
+         items.shift();
+     }));
+ }
 async function generateScreenShotFromCsv() {
     //getting remote file
     getRemoteFile(filePath, url);
-    
+
     fs.createReadStream("./download/product.csv")
         .pipe(parse({ delimiter: ",", from_line: 2 }))
         .on("data",  async function (row) {
@@ -63,7 +62,7 @@ async function generateScreenShotFromCsv() {
             let productId = row[0].split(".")[0];
             let imgUrl = row[1];
             items.push([fileName[fileName.length - 2].split("/").pop(), productId, imgUrl]);
-            createScreenShot(items)
+            await createScreenShot(items)
         })
         .on("end", function () {
             console.log("finished");
